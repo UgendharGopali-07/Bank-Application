@@ -44,7 +44,7 @@ public class DeletionService {
                     break;
                 }
             }
-            // above code gives ConcurrentException with iteration,so use lambda function:
+            // above code can give ConcurrentException with iteration,so use lambda function:
             // u.getAccountList().removeIf(a->a.getAccId()==id);
             // or you can use for-index loop i.e,. for(int i=0;i..) but after deleting do i--; so that we cant next index
             boolean temp=accountRepository.deleteAccount(id);
